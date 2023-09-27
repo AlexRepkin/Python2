@@ -8,12 +8,12 @@ bool continuing, player;
 
 char matrix[9] = {' ',' ',' ',' ',' ',' ',' ',' ',' '};
 
-//void symbols() {
-//    cout << "Please, choose symbol for the first player.\nCharacter - ";
-//    cin >> first;
-//    cout << "Please, choose symbol for the second player.\nCharacter - ";
-//    cin >> second;
-//}
+void symbols() {
+    cout << "Please, choose symbol for the first player.\nCharacter - ";
+    cin >> first;
+    cout << "Please, choose symbol for the second player.\nCharacter - ";
+    cin >> second;
+}
 
 bool checking() {
     if ((matrix[0] == matrix[1] && matrix[1] == matrix[2] && matrix[0] != ' ') || (matrix[3] == matrix[4] && matrix[4] == matrix[5] && matrix[3] != ' ') || (matrix[6] == matrix[7] && matrix[7] == matrix[8] && matrix[6] != ' ') || (matrix[0] == matrix[3] && matrix[3] == matrix[6] && matrix[0] != ' ') || (matrix[1] == matrix[4] && matrix[4] == matrix[7] && matrix[1] != ' ') || (matrix[2] == matrix[5] && matrix[5] == matrix[8] && matrix[2] != ' ') || (matrix[0] == matrix[4] && matrix[4] == matrix[8] && matrix[0] != ' ') || (matrix[2] == matrix[4] && matrix[4] == matrix[6] && matrix[2] != ' ')) return true;
@@ -52,9 +52,9 @@ bool playing() {
 
 int main(){
     cout << "Hey! I have prepared this small program for this task.\nThis time I've decided to make a very bad tic tac toe game.\n";
-    //symbols();
+    symbols();
     char choose;
-    //cout << "Great, now that we've decided which symbol each of you have, we can start the game.\n";
+    cout << "Great, now that we've decided which symbol each of you have, we can start the game.\n";
     while (true) {
         cout << "\nYou are in the main menu right now. What would you like to do?\n1 - Start game\n2 - Change symbols\n3 - Exit the game\n\nInput - ";
         cin >> choose;
@@ -67,7 +67,7 @@ int main(){
                 }
             }
         }
-        //if (choose == '2') symbols();
+        if (choose == '2') symbols();
         if (choose == '3') break;
     }
     cout << "\nSee you soon!";
