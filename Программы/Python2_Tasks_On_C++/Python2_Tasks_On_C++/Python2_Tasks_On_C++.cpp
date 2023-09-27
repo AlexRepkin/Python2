@@ -22,6 +22,7 @@ bool checking() {
 
 bool playing() {
     cout << "-------------\n|   |   |   |\n-------------\n|   |   |   |\n-------------\n|   |   |   |\n-------------\n";
+    srand((unsigned)time(0));
     player = rand() % 2;
     int space;
     char current;
